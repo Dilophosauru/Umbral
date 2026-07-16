@@ -10,10 +10,22 @@
 <body>
 
 <section class="pagina pagina-portada activa">
+
+  <!-- TENTÁCULOS ANIMADOS -->
+  <img src="Imagenes/tentaculo-1.png" class="tentaculo tentaculo-1" alt="">
+  <img src="Imagenes/tentaculo-2.png" class="tentaculo tentaculo-2" alt="">
+  <img src="Imagenes/tentaculo-3.png" class="tentaculo tentaculo-3" alt="">
+  <img src="Imagenes/tentaculo-4.png" class="tentaculo tentaculo-4" alt="">
+
+  <!-- LOGO Y BOTÓN -->
   <div class="contenido-portada">
     <img src="Imagenes/Logo.png" alt="Umbral" class="logo-umbral">
-    <button class="boton-empezar" id="entrarInicio">Da click para iniciar</button>
+
+    <button class="boton-empezar" id="entrarInicio">
+      Da click para iniciar
+    </button>
   </div>
+
 </section>
 
 <section class="pagina pagina-inicio">
@@ -49,15 +61,16 @@
 
 <section class="pagina pagina-ruinas">
   <div class="escena-bioma escena-ruinas">
-    <img src="Imagenes/Ruinas 5.png" alt="Ruinas principales" class="capa-bioma capa-frente">
-    <img src="Imagenes/Ruinas 4.png" alt="Columnas de ruinas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Ruinas 3.png" alt="Pilares de ruinas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Ruinas 2.png" alt="Estatua de ruinas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Ruinas 1.png" alt="Columna de ruinas" class="capa-bioma capa-frente">
+    <img src="Imagenes/Ruinas 5.png" alt="Ruinas principales" class="capa-bioma capa-frente capa-detras-criatura">
+    <img src="Imagenes/Ruinas 4.png" alt="Columnas de ruinas" class="capa-bioma capa-frente capa-detras-criatura">
 
     <button class="boton-criatura criatura-ruinas-btn" id="abrirDescripcionReyAmarillo" aria-label="Abrir descripción del Rey Amarillo">
       <img src="Imagenes/Rey amarillo criatura.png" alt="El Rey Amarillo" class="criatura-habitat">
     </button>
+
+    <img src="Imagenes/Ruinas 3.png" alt="Pilares de ruinas" class="capa-bioma capa-frente capa-tapa-criatura">
+    <img src="Imagenes/Ruinas 2.png" alt="Estatua de ruinas" class="capa-bioma capa-frente capa-tapa-criatura">
+    <img src="Imagenes/Ruinas 1.png" alt="Columna de ruinas" class="capa-bioma capa-frente capa-tapa-criatura">
   </div>
 
   <button class="boton volver-bioma" id="volverMapaRuinas">VOLVER AL MAPA</button>
@@ -66,15 +79,16 @@
 <section class="pagina pagina-oceano">
   <div class="escena-bioma escena-oceano">
     <img src="Imagenes/Oceano 6.png" alt="Fondo del océano" class="capa-bioma capa-fondo">
-    <img src="Imagenes/Oceano 5.png" alt="Océano" class="capa-bioma capa-frente">
-    <img src="Imagenes/Oceano 4.png" alt="Océano" class="capa-bioma capa-frente">
-    <img src="Imagenes/Oceano 3.png" alt="Océano" class="capa-bioma capa-frente">
-    <img src="Imagenes/Oceano 2.png" alt="Océano" class="capa-bioma capa-frente">
-    <img src="Imagenes/Oceano 1.png" alt="Océano" class="capa-bioma capa-frente">
+    <img src="Imagenes/Oceano 5.png" alt="Océano" class="capa-bioma capa-frente capa-detras-criatura">
+    <img src="Imagenes/Oceano 4.png" alt="Océano" class="capa-bioma capa-frente capa-detras-criatura">
 
     <button class="boton-criatura criatura-oceano-btn" id="abrirDescripcionMadreHidra" aria-label="Abrir descripción de Madre Hidra">
       <img src="Imagenes/Madre hidra criatura.png" alt="Madre Hydra" class="criatura-habitat">
     </button>
+
+    <img src="Imagenes/Oceano 3.png" alt="Océano" class="capa-bioma capa-frente capa-tapa-criatura">
+    <img src="Imagenes/Oceano 2.png" alt="Océano" class="capa-bioma capa-frente capa-tapa-criatura">
+    <img src="Imagenes/Oceano 1.png" alt="Océano" class="capa-bioma capa-frente capa-tapa-criatura">
   </div>
 
   <button class="boton volver-bioma" id="volverMapaOceano">VOLVER AL MAPA</button>
@@ -84,13 +98,19 @@
   <div class="escena-bioma escena-espacio">
     <img src="Imagenes/Espacio 5.png" alt="Fondo del espacio" class="capa-bioma capa-fondo">
     <img src="Imagenes/Espacio 4.png" alt="Estrellas del espacio" class="capa-bioma capa-estrellas">
-  <img src="Imagenes/Espacio 2.png" alt="Nebulosa derecha" class="capa-bioma capa-frente">
-  <img src="Imagenes/Espacio 3.png" alt="Nebulosa izquierda" class="capa-bioma capa-frente">
-    <img src="Imagenes/Espacio 1.png" alt="Galaxias del espacio" class="capa-bioma capa-frente">
+
+    <img src="Imagenes/Espacio 2.png" alt="Nebulosa derecha" class="capa-bioma capa-frente capa-detras-criatura">
+
+    <button class="boton-criatura nyarlathotep-espacio-btn" id="abrirDescripcionNyarlathotep" aria-label="Abrir descripción de Nyarlathotep">
+      <img src="Imagenes/nyarlathotep.png" alt="Nyarlathotep" class="nyarlathotep-espacio">
+    </button>
 
     <button class="boton-criatura criatura-espacio-btn" id="abrirDescripcionAzathoth" aria-label="Abrir descripción de Azathoth">
       <img src="Imagenes/Azatoth criatura.png" alt="Azathoth" class="criatura-habitat">
     </button>
+
+    <img src="Imagenes/Espacio 3.png" alt="Nebulosa izquierda" class="capa-bioma capa-frente capa-tapa-criatura">
+    <img src="Imagenes/Espacio 1.png" alt="Galaxias del espacio" class="capa-bioma capa-frente capa-tapa-criatura">
   </div>
 
   <button class="boton volver-bioma" id="volverMapaEspacio">VOLVER AL MAPA</button>
@@ -99,14 +119,15 @@
 <section class="pagina pagina-bosque">
   <div class="escena-bioma escena-bosque">
     <img src="Imagenes/Bosque 5.png" alt="Fondo del bosque" class="capa-bioma capa-fondo">
-    <img src="Imagenes/Bosque 4.png" alt="Bosque" class="capa-bioma capa-frente">
-    <img src="Imagenes/Bosque 3.png" alt="Bosque" class="capa-bioma capa-frente">
-    <img src="Imagenes/Bosque 2.png" alt="Bosque" class="capa-bioma capa-frente">
-    <img src="Imagenes/Bosque 1.png" alt="Bosque" class="capa-bioma capa-frente">
+    <img src="Imagenes/Bosque 4.png" alt="Bosque" class="capa-bioma capa-frente capa-detras-criatura">
+    <img src="Imagenes/Bosque 3.png" alt="Bosque" class="capa-bioma capa-frente capa-detras-criatura">
 
     <button class="boton-criatura criatura-bosque-btn" id="abrirDescripcionShub" aria-label="Abrir descripción de Shub-Niggurath">
       <img src="Imagenes/Sugura criatura.png" alt="Shub-Niggurath" class="criatura-habitat">
     </button>
+
+    <img src="Imagenes/Bosque 2.png" alt="Bosque" class="capa-bioma capa-frente capa-tapa-criatura">
+    <img src="Imagenes/Bosque 1.png" alt="Bosque" class="capa-bioma capa-frente capa-tapa-criatura">
   </div>
 
   <button class="boton volver-bioma" id="volverMapaBosque">VOLVER AL MAPA</button>
@@ -114,50 +135,70 @@
 
 <section class="pagina pagina-montanas">
   <div class="escena-bioma escena-montanas">
-    <img src="Imagenes/Montanas 8.png" alt="Fondo de montañas" class="capa-bioma capa-fondo">
-    <img src="Imagenes/Montanas 7.png" alt="Montañas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Montanas 6.png" alt="Montañas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Montana 5.png" alt="Montañas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Montana 4.png" alt="Montañas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Montana 3.png" alt="Montañas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Montana 2.png" alt="Montañas" class="capa-bioma capa-frente">
-    <img src="Imagenes/Montana 1.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montanas 8.png" alt="Fondo de montañas" class="capa-bioma capa-fondo">
+  <img src="Imagenes/Montanas 7.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montanas 6.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montana 5.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montana 4.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montana 3.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montana 2.png" alt="Montañas" class="capa-bioma capa-frente">
+  <img src="Imagenes/Montana 1.png" alt="Montañas" class="capa-bioma capa-frente">
 
-    <button class="boton-criatura criatura-montanas-btn" id="abrirDescripcionMigo" aria-label="Abrir descripción de Mi-Go">
-      <img src="Imagenes/Migo criatura.png" alt="Mi-Go" class="criatura-habitat">
-    </button>
+  <button class="boton-criatura criatura-montanas-btn" id="abrirDescripcionMigo" aria-label="Abrir descripción de Mi-Go">
+    <img src="Imagenes/Migo criatura.png" alt="Mi-Go" class="criatura-habitat">
+  </button>
+</div>
+
+   <img src="Imagenes/Montana 4.png" alt="Montañas" class="capa-bioma capa-frente capa-montana-detras">
+<img src="Imagenes/Montana 3.png" alt="Montañas" class="capa-bioma capa-frente capa-montana-detras">
+<img src="Imagenes/Montana 2.png" alt="Montañas" class="capa-bioma capa-frente capa-montana-detras">
+
+<img src="Imagenes/Montana 1.png" alt="Montañas" class="capa-bioma capa-frente capa-tapa-migo">
   </div>
 
   <button class="boton volver-bioma" id="volverMapaMontanas">VOLVER AL MAPA</button>
 </section>
 
-
 <!-- PÁGINAS DE DESCRIPCIÓN -->
-<section class="pagina pagina-descripcion pagina-descripcion-rey-amarillo">
+<section class="pagina pagina-descripcion pagina-descripcion-rey-amarillo descripcion-fondo-ruinas">
   <img src="Imagenes/descripcion-rey-amarillo.jpg" alt="Descripción del Rey Amarillo" class="imagen-descripcion" loading="lazy">
   <button class="boton volver-descripcion" id="volverDescripcionReyAmarillo">VOLVER A RUINAS</button>
 </section>
 
-<section class="pagina pagina-descripcion pagina-descripcion-madre-hidra">
+<section class="pagina pagina-descripcion pagina-descripcion-madre-hidra descripcion-fondo-oceano">
   <img src="Imagenes/descripcion-madre-hidra.jpg" alt="Descripción de Madre Hidra" class="imagen-descripcion" loading="lazy">
   <button class="boton volver-descripcion" id="volverDescripcionMadreHidra">VOLVER AL OCÉANO</button>
 </section>
 
-<section class="pagina pagina-descripcion pagina-descripcion-azathoth">
+<section class="pagina pagina-descripcion pagina-descripcion-azathoth descripcion-fondo-espacio">
   <img src="Imagenes/descripcion-azathoth.jpg" alt="Descripción de Azathoth" class="imagen-descripcion" loading="lazy">
   <button class="boton volver-descripcion" id="volverDescripcionAzathoth">VOLVER AL ESPACIO</button>
 </section>
 
-<section class="pagina pagina-descripcion pagina-descripcion-shub">
+<section class="pagina pagina-descripcion pagina-descripcion-shub descripcion-fondo-bosque">
   <img src="Imagenes/descripcion-shub-niggurath.jpg" alt="Descripción de Shub-Niggurath" class="imagen-descripcion" loading="lazy">
   <button class="boton volver-descripcion" id="volverDescripcionShub">VOLVER AL BOSQUE</button>
 </section>
 
-<section class="pagina pagina-descripcion pagina-descripcion-migo">
+<section class="pagina pagina-descripcion pagina-descripcion-migo descripcion-fondo-montanas">
   <img src="Imagenes/descripcion-migo.jpg" alt="Descripción de Mi-Go" class="imagen-descripcion" loading="lazy">
   <button class="boton volver-descripcion" id="volverDescripcionMigo">VOLVER A MONTAÑAS</button>
 </section>
 
+<section class="pagina pagina-descripcion pagina-descripcion-nyarlathotep descripcion-fondo-espacio">
+  <img src="Imagenes/descripcion-nyarlathotep.jpg" alt="Descripción de Nyarlathotep" class="imagen-descripcion" loading="lazy">
+  <button class="boton volver-descripcion" id="volverDescripcionNyarlathotep">VOLVER AL ESPACIO</button>
+</section>
+
+<audio id="sonidoMapa" src="Sonidos/mapa.mp3" loop></audio>
+<audio id="sonidoEspacio" src="Sonidos/espacio.mp3" loop></audio>
+<audio id="sonidoBosque" src="Sonidos/bosque.mp3" loop></audio>
+<audio id="sonidoMontanas" src="Sonidos/montanas.mp3" loop></audio>
+<audio id="sonidoRuinas" src="Sonidos/ruinas.mp3" loop></audio>
+<audio id="sonidoOceano" src="Sonidos/oceano.mp3" loop></audio>
+<audio id="sonidoPapel" src="Sonidos/papel.mp3"></audio>
+
 <script src="script.js"></script>
 </body>
 </html>
+
