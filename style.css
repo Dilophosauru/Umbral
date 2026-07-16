@@ -128,18 +128,11 @@ body {
   right: 24px;
 }
 
-.boton-mapa { 
-  position: absolute; 
-
-  top: 60%; 
-  left: 60%;
-
-  bottom: auto; 
-  transform: translateX(-50%); 
-  z-index: 35; 
-
-  background: rgba(0, 1, 1, 0.58); 
-  backdrop-filter: blur(2px); 
+.boton-mapa {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* MAPA */
@@ -191,7 +184,7 @@ body {
 .mapa-contenedor.hover-bosque .mapa-bosque,
 .mapa-contenedor.hover-montanas .mapa-montanas,
 .mapa-contenedor.hover-ruinas .mapa-ruinas {
-  transform: scale(1.012);
+  transform: scale(1.025);
   filter:
     brightness(1.15)
     drop-shadow(0 0 18px rgba(200, 179, 125, 0.45));
@@ -259,13 +252,9 @@ body {
 
 .volver-mapa {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
+  right: 24px;
+  bottom: 24px;
   z-index: 30;
-
-  padding: 8px 16px;
-  font-size: 12px;
-  letter-spacing: 1px;
 }
 
 /* ESCENAS DE BIOMAS */
@@ -279,7 +268,7 @@ body {
 
 /* Fondos para que no se noten bordes */
 .escena-ruinas {
-  background: #000101;
+  background: #e0aa61;
 }
 
 .escena-oceano,
@@ -335,686 +324,42 @@ body {
 
 @keyframes moverLento {
   from {
-    transform: translateY(-50%) translateX(-4px);
+    transform: translateY(-50%) translateX(-12px);
   }
 
   to {
-    transform: translateY(-50%) translateX(4px);
+    transform: translateY(-50%) translateX(12px);
   }
 }
 
 @keyframes moverMedio {
   from {
-    transform: translateY(-50%) translateX(5px);
+    transform: translateY(-50%) translateX(16px);
   }
 
   to {
-    transform: translateY(-50%) translateX(-5px);
+    transform: translateY(-50%) translateX(-16px);
   }
 }
 
 @keyframes moverFondo {
   from {
-    transform: translateY(-50%) translateX(-3px);
+    transform: translateY(-50%) translateX(-6px);
   }
 
   to {
-    transform: translateY(-50%) translateX(3px);
+    transform: translateY(-50%) translateX(6px);
   }
 }
 
 .capa-fondo {
-  animation: moverFondo 8s ease-in-out infinite alternate;
+  animation: moverFondo 10s ease-in-out infinite alternate;
 }
 
 .capa-estrellas {
-  animation: moverLento 13s ease-in-out infinite alternate;
+  animation: moverLento 16s ease-in-out infinite alternate;
 }
 
 .capa-frente {
-  animation: moverMedio 6.5s ease-in-out infinite alternate;
-}
-
-/* ============================= */
-/* CRIATURAS CLICKEABLES EN CADA HÁBITAT */
-/* ============================= */
-
-.boton-criatura {
-  position: absolute;
-  z-index: 20;
-
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: transparent;
-
-  cursor: pointer;
-
-  filter:
-    drop-shadow(0 20px 22px rgba(0, 0, 0, 0.75))
-    drop-shadow(0 0 18px rgba(200, 179, 125, 0.18));
-
-  animation: flotarCriatura 6s ease-in-out infinite alternate;
-}
-
-.boton-criatura .criatura-habitat {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  pointer-events: none;
-
-  transition:
-    transform 0.35s ease,
-    filter 0.35s ease;
-}
-
-.boton-criatura:hover .criatura-habitat {
-  transform: scale(1.05);
-  filter:
-    brightness(1.12)
-    drop-shadow(0 0 20px rgba(200, 179, 125, 0.55));
-}
-
-/* Azathoth en espacio */
-.criatura-espacio-btn {
-  width: min(46vw, 620px);
-  left: 28%;
-  top: 18%;
-}
-
-/* Madre Hydra en océano */
-.criatura-oceano-btn {
-  width: min(43vw, 600px);
-  left: 30%;
-  top: 20%;
-}
-
-/* Shub-Niggurath en bosque */
-.criatura-bosque-btn {
-  width: min(26vw, 360px);
-  left: 50%;
-  top: 43%;
-
-  z-index: 27;
-
-  animation: flotarShub 6s ease-in-out infinite alternate;
-}
-
-@keyframes flotarShub {
-  from {
-    transform: translateX(-50%) translateY(-3px);
-  }
-
-  to {
-    transform: translateX(-50%) translateY(4px);
-  }
-}
-
-.escena-montanas {
-  position: relative;
-}
-
-.criatura-montanas-btn {
-  position: absolute;
-  right: 8%;
-  bottom: 10%;
-
-  width: 15vw;
-  z-index: 50; /* más alto que todas las capas */
-
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.criatura-montanas-btn img,
-.criatura-montanas-btn .criatura-habitat {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Rey Amarillo en ruinas */
-.criatura-ruinas-btn {
-  width: min(28vw, 380px);
-  left: 36%;
-  top: 40%;
-}
-
-@keyframes flotarCriatura {
-  from {
-    translate: 0 -3px;
-  }
-
-  to {
-    translate: 0 4px;
-  }
-}
-
-@media (max-width: 900px) {
-  .criatura-espacio-btn,
-  .criatura-oceano-btn,
-  .criatura-bosque-btn,
-  .criatura-montanas-btn,
-  .criatura-ruinas-btn {
-    width: 62vw;
-    left: 19%;
-    top: 23%;
-  }
-}
-
-/* ============================= */
-/* PÁGINAS DE DESCRIPCIÓN */
-/* ============================= */
-
-.pagina-descripcion {
-  padding: 0;
-  overflow: hidden;
-
-  background:
-    radial-gradient(circle at center, rgba(60, 45, 30, 0.35), transparent 45%),
-    linear-gradient(135deg, #050505, #11100d, #1c1712);
-
-  perspective: 1200px;
-}
-
-.imagen-descripcion {
-  width: 94vw;
-  max-width: 1500px;
-  max-height: 90vh;
-  object-fit: contain;
-  display: block;
-
-  box-shadow:
-    0 30px 55px rgba(0, 0, 0, 0.9),
-    0 0 35px rgba(200, 179, 125, 0.18);
-
-  /* Entra desde abajo como una página que sube a escena */
-  transform: translateY(120%) rotateX(16deg) scale(0.96);
-  transform-origin: bottom center;
-  opacity: 0;
-
-  transition:
-    transform 0.9s ease,
-    opacity 0.9s ease;
-}
-
-.pagina-descripcion.activa .imagen-descripcion {
-  transform: translateY(0) rotateX(0deg) scale(1);
-  opacity: 1;
-}
-
-.volver-descripcion {
-  position: absolute;
-  right: 24px;
-  bottom: 24px;
-  z-index: 40;
-
-  padding: 10px 18px;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-/* ============================= */
-/* TENTÁCULOS EN PORTADA */
-/* ============================= */
-
-.pagina-portada {
-  position: relative;
-  overflow: hidden;
-}
-
-.contenido-portada {
-  position: relative;
-  z-index: 10;
-}
-
-.tentaculo {
-  position: absolute;
-  z-index: 2;
-
-  width: 360px;
-  height: auto;
-
-  opacity: 0;
-  pointer-events: none;
-
-  /* Gris oscuro sin resplandor */
-  filter: invert(25%);
-
-  will-change: transform, opacity;
-  transform-origin: center center;
-}
-
-/* Tentáculo 1 */
-.tentaculo-1 {
-  left: -360px;
-  top: 5%;
-  width: 360px;
-
-  opacity: 0;
-
-  animation: aparecerIzquierda 22s linear infinite;
-  animation-delay: 4s;
-  animation-fill-mode: both;
-}
-
-/* Tentáculo 2 */
-.tentaculo-2 {
-  right: -230px;
-  top: 36%;
-  width: 350px;
-
-  animation: aparecerDerecha 15s linear infinite;
-  animation-delay: 5s;
-}
-
-/* Tentáculo 3 */
-.tentaculo-3 {
-  left: 8%;
-  bottom: -220px;
-  width: 320px;
-
-  animation: aparecerAbajo 16s linear infinite;
-  animation-delay: 9s;
-}
-
-/* Tentáculo 4 */
-.tentaculo-4 {
-  right: 12%;
-  top: -230px;
-  width: 330px;
-
-  animation: aparecerArriba 14s linear infinite;
-  animation-delay: 3s;
-}
-
-/* ============================= */
-/* ANIMACIONES SIN PAUSA */
-/* ============================= */
-
-@keyframes aparecerIzquierda {
-  0% {
-    opacity: 0;
-    transform: translate3d(-80px, 0, 0) rotate(18deg);
-  }
-
-  10% {
-    opacity: 0;
-    transform: translate3d(-40px, -1px, 0) rotate(18.3deg);
-  }
-
-  20% {
-    opacity: 0.08;
-    transform: translate3d(0px, -2px, 0) rotate(18.6deg);
-  }
-
-  30% {
-    opacity: 0.18;
-    transform: translate3d(35px, -3px, 0) rotate(19deg);
-  }
-
-  40% {
-    opacity: 0.32;
-    transform: translate3d(70px, -4px, 0) rotate(19.4deg);
-  }
-
-  50% {
-    opacity: 0.48;
-    transform: translate3d(100px, -5px, 0) rotate(19.8deg);
-  }
-
-  60% {
-    opacity: 0.62;
-    transform: translate3d(125px, -6px, 0) rotate(20.2deg);
-  }
-
-  70% {
-    opacity: 0.62;
-    transform: translate3d(145px, -7px, 0) rotate(20.8deg);
-  }
-
-  82% {
-    opacity: 0.35;
-    transform: translate3d(170px, -8px, 0) rotate(21.5deg);
-  }
-
-  92% {
-    opacity: 0.08;
-    transform: translate3d(195px, -9px, 0) rotate(22deg);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate3d(220px, -10px, 0) rotate(22deg);
-  }
-}
-
-@keyframes aparecerDerecha {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0) rotate(-35deg);
-  }
-
-  8% {
-    opacity: 0.35;
-    transform: translate3d(-30px, 2px, 0) rotate(-34deg);
-  }
-
-  18% {
-    opacity: 0.75;
-    transform: translate3d(-75px, 5px, 0) rotate(-33deg);
-  }
-
-  30% {
-    opacity: 0.75;
-    transform: translate3d(-115px, 7px, 0) rotate(-32deg);
-  }
-
-  42% {
-    opacity: 0;
-    transform: translate3d(-150px, 9px, 0) rotate(-31deg);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate3d(-150px, 9px, 0) rotate(-31deg);
-  }
-}
-
-@keyframes aparecerAbajo {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0) rotate(-15deg);
-  }
-
-  8% {
-    opacity: 0.35;
-    transform: translate3d(1px, -30px, 0) rotate(-14deg);
-  }
-
-  18% {
-    opacity: 0.75;
-    transform: translate3d(3px, -75px, 0) rotate(-13deg);
-  }
-
-  30% {
-    opacity: 0.75;
-    transform: translate3d(5px, -115px, 0) rotate(-12deg);
-  }
-
-  42% {
-    opacity: 0;
-    transform: translate3d(8px, -150px, 0) rotate(-11deg);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate3d(8px, -150px, 0) rotate(-11deg);
-  }
-}
-
-@keyframes aparecerArriba {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-
-  8% {
-    opacity: 0.35;
-    transform: translate3d(-1px, 30px, 0) rotate(1deg);
-  }
-
-  18% {
-    opacity: 0.75;
-    transform: translate3d(-3px, 75px, 0) rotate(2deg);
-  }
-
-  30% {
-    opacity: 0.75;
-    transform: translate3d(-5px, 115px, 0) rotate(3deg);
-  }
-
-  42% {
-    opacity: 0;
-    transform: translate3d(-8px, 150px, 0) rotate(4deg);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translate3d(-8px, 150px, 0) rotate(4deg);
-  }
-}
-
-.nyarlathotep-espacio-btn {
-  position: absolute;
-  z-index: 25;
-
-  left: 60%;
-  top: 35%;
-
-  width: min(22vw, 300px);
-
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: transparent;
-
-  cursor: pointer;
-
-  animation: flotarNyarlathotep 7s ease-in-out infinite alternate;
-}
-
-.nyarlathotep-espacio {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-
-  pointer-events: none;
-
-  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.75));
-
-  transition:
-    transform 0.35s ease,
-    filter 0.35s ease;
-}
-
-.nyarlathotep-espacio-btn:hover .nyarlathotep-espacio {
-  transform: scale(1.05);
-  filter:
-    brightness(1.12)
-    drop-shadow(0 0 20px rgba(200, 179, 125, 0.45));
-}
-
-@keyframes flotarNyarlathotep {
-  from {
-    transform: translateY(-4px) rotate(-1deg);
-  }
-
-  to {
-    transform: translateY(5px) rotate(1deg);
-  }
-}
-
-/* Capas que quedan detrás de las criaturas */
-.capa-detras-criatura {
-  z-index: 5;
-}
-
-/* Capas que quedan delante de las criaturas */
-.capa-tapa-criatura {
-  z-index: 28;
-  pointer-events: none;
-}
-
-/* Criaturas entre capas */
-.boton-criatura {
-  z-index: 20;
-}
-
-/* Ajuste para que las criaturas se integren más */
-.criatura-habitat {
-  filter:
-    brightness(0.88)
-    contrast(1.05)
-    drop-shadow(0 18px 20px rgba(0, 0, 0, 0.75));
-}
-
-/* Nyarlathotep entre capas */
-.nyarlathotep-espacio-btn {
-  z-index: 19;
-}
-
-.nyarlathotep-espacio {
-  filter:
-    brightness(0.88)
-    contrast(1.05)
-    drop-shadow(0 18px 20px rgba(0, 0, 0, 0.75));
-}
-
-/* FONDO TRASLÚCIDO EN DESCRIPCIONES */
-/* ============================= */
-
-.pagina-descripcion {
-  position: absolute;
-  overflow: hidden;
-
-  background:
-    linear-gradient(rgba(0, 1, 1, 0.72), rgba(0, 1, 1, 0.82));
-}
-
-/* Fondo general detrás de la ficha */
-.pagina-descripcion::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0.80;
-  filter: blur(2px) brightness(0.75);
-
-  z-index: 0;
-}
-
-/* Capa oscura encima del bioma para que se lea la descripción */
-.pagina-descripcion::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at center, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.75));
-
-  z-index: 1;
-}
-
-/* La imagen de descripción queda encima del fondo */
-.imagen-descripcion {
-  position: relative;
-  z-index: 2;
-}
-
-/* El botón también queda encima */
-.volver-descripcion {
-  z-index: 40;
-}
-
-/* Fondo descripción: espacio */
-.descripcion-fondo-espacio::before {
-  background-image: url("Imagenes/Espacio 5.png");
-}
-
-/* Fondo descripción: océano */
-.descripcion-fondo-oceano::before {
-  background-image: url("Imagenes/Oceano 6.png");
-}
-
-/* Fondo descripción: bosque */
-.descripcion-fondo-bosque::before {
-  background-image: url("Imagenes/Bosque 5.png");
-}
-
-/* Fondo descripción: montañas */
-.descripcion-fondo-montanas::before {
-  background-image: url("Imagenes/Montanas 8.png");
-}
-
-/* Fondo descripción: ruinas */
-.descripcion-fondo-ruinas::before {
-  background-image: url("Imagenes/Ruinas 5.png");
-}
-.criatura-bosque-btn {
-  width: min(22vw, 320px) !important;
-
-  left: 50% !important;
-  top: 48% !important;
-
-  z-index: 35 !important;
-
-  animation: flotarShubFrente 6s ease-in-out infinite alternate !important;
-}
-
-.criatura-bosque-btn .criatura-habitat {
-  width: 100%;
-  height: auto;
-
-  filter:
-    brightness(0.95)
-    contrast(1.08)
-    drop-shadow(0 20px 24px rgba(0, 0, 0, 0.85));
-}
-
-@keyframes flotarShubFrente {
-  from {
-    transform: translateX(-50%) translateY(-4px);
-  }
-
-  to {
-    transform: translateX(-50%) translateY(5px);
-  }
-}
-
-.criatura-montanas-btn {
-  width: min(34vw, 480px) !important;
-
-  left: 58% !important;
-  top: 36% !important;
-
-  z-index: 27 !important;
-
-  animation: flotarMigoFrente 6s ease-in-out infinite alternate !important;
-}
-
-@keyframes flotarMigoFrente {
-  from {
-    transform: translateY(-4px);
-  }
-
-  to {
-    transform: translateY(5px);
-  }
-}
-
-.criatura-montanas-btn .criatura-habitat {
-  filter:
-    brightness(0.95)
-    contrast(1.08)
-    drop-shadow(0 22px 26px rgba(0, 0, 0, 0.85));
-}
-
-/* Capas de montañas detrás de Mi-Go */
-.escena-montanas .capa-montana-detras {
-  z-index: 18 !important;
-}
-
-/* Esta capa queda encima de Mi-Go y lo tapa parcialmente */
-.escena-montanas .capa-tapa-migo {
-  z-index: 28 !important;
-  pointer-events: none;
+  animation: moverMedio 8s ease-in-out infinite alternate;
 }
